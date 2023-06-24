@@ -3,5 +3,9 @@
     "other": true,
     "comments": false,
     "strings": true
-  }
+  },
+  "cSpell.words": [
+    "splide",
+    "splidejs"
+  ]
 }
