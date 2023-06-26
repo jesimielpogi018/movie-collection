@@ -16,8 +16,8 @@ function prev() {}
 function next() {}
 
 export async function getUpcomingMovies(config: GetUpcomingMoviesOptions) {
-  const limit = config.limit ? `limit=${config.limit}` : "";
-  const page = config.page ? `page=${config.page}` : "";
+  const limit = config.limit ? config.limit : 10;
+  const page = config.page ? config.page : 1;
 
   const objectParam = { limit, page };
 
