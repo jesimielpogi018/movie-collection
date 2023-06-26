@@ -1,4 +1,5 @@
 import { API_URL } from "./url";
+import { objectToUrlParams } from "$lib/utils/objectToParam";
 import type { MovieType } from "./type";
 
 interface GetUpcomingMoviesOptions {
@@ -18,7 +19,9 @@ export async function getUpcomingMovies(config: GetUpcomingMoviesOptions) {
   const limit = config.limit ? `limit=${config.limit}` : "";
   const page = config.page ? `page=${config.page}` : "";
 
-  const params = `${page}&${limit}`;
+  const objectParam = { limit, page };
+
+  const params = objectToUrlParams(objectParam);
 
   // if (MapCaching.has(params)) {
   //   return MapCaching.get(params) as Array<MovieType>;
