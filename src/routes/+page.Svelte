@@ -2,12 +2,12 @@
   import { onMount } from "svelte";
   import MovieComponent from "$lib/components/MovieComponent.svelte";
   import { getUpcomingMovies } from "$lib/api/getUpcomingMovies";
-  import { GetNewRelease } from "$lib/api/getNewRelease";
+  import { getRandom } from "$lib/api/getRandom";
 
   let movies = getUpcomingMovies({ limit: 10, page: 1 });
 
   onMount(async () => {
-    let result = await GetNewRelease({ endYear: new Date().getFullYear() });
+    let result = await getRandom({});
     console.log(result);
   });
 </script>
