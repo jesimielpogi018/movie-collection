@@ -10,7 +10,7 @@ export interface MovieType {
     caption: {
       plainText: string;
       __typename: string;
-    };
+    } | null;
   };
   titleType: {
     displayableProperty: {
@@ -40,11 +40,11 @@ export interface MovieType {
     year: number;
     endYear: number | null;
     __typename: string;
-  };
+  } | null;
   releaseDate: {
     day: number;
     month: number;
     year: number;
     __typename: string;
-  };
+  } | null;
 }
