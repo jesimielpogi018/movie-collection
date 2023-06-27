@@ -2,11 +2,12 @@
   import { onMount } from "svelte";
   import MovieComponent from "$lib/components/MovieComponent.svelte";
   import { getUpcomingMovies } from "$lib/api/getUpcomingMovies";
+  import { GetNewRelease } from "$lib/api/getNewRelease";
 
   let movies = getUpcomingMovies({ limit: 10, page: 1 });
 
   onMount(async () => {
-    let result = await getUpcomingMovies({ limit: 10, page: 1 });
+    let result = await GetNewRelease({ endYear: new Date().getFullYear() });
     console.log(result);
   });
 </script>
