@@ -4,7 +4,7 @@
   // export let movie: MovieType;
 </script>
 
-<div class="dsy-card w-full bg-base-100 shadow-xl rounded-sm">
+<div class="dsy-card w-full bg-base-100 shadow-xl rounded-md">
   <figure>
     <img
       src="https://dummyimage.com/600x400/3d3d3d/ffffff.png&text=No+Poster+Available"

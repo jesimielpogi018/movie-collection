@@ -1,17 +1,16 @@
 <script lang="ts">
-  import type { ActionData } from "./$types.js";
+  import type { PageData } from "./$types.js";
   import Search from "$lib/components/Search.svelte";
-  import Trending from "$lib/components/Trending.svelte";
 
-  export let form: ActionData;
+  export let data: PageData;
+  console.log(data);
 </script>
 
 <svelte:head>
-  <title>Movie Collection | Search Movies Online</title>
+  <title>Search Movie Keyword</title>
 </svelte:head>
 
 <main class="w-full">
   <p class="text-center text-2xl my-4">Search Movies, Tv Series, and More...</p>
   <Search />
-  <Trending />
 </main>

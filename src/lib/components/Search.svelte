@@ -12,6 +12,7 @@
       type="text"
       name="movie-title"
       placeholder="enter keyword..."
+      required
     />
     <button class="dsy-btn dsy-btn-primary">
       <img src="/feather-icon/search.svg" alt="" width="32" height="32" />
