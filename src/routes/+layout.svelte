@@ -3,6 +3,14 @@
   const date = new Date();
 </script>
 
+<!-- <nav class="bg-slate-600">
+  <ul>
+    <li>Home</li>
+    <li>Popular</li>
+    <li>Movies</li>
+    <li>Upcoming</li>
+  </ul>
+</nav> -->
 <slot />
 <footer class="bg-slate-600">
   <ul class="flex flex-row justify-center items-center flex-wrap gap-x-2">
