@@ -22,5 +22,6 @@
         <img src="/feather-icon/search.svg" alt="" width="32" height="32" />
       </button>
     </form>
+    <a class="dsy-btn dsy-btn-secondary my-2" href="/home">View Full Site...</a>
   </div>
 </main>
