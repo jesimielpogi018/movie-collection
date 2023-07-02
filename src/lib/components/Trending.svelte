@@ -1,43 +1,17 @@
 <script lang="ts">
+  import type { MovieType } from "$lib/api/type";
   import MovieComponent from "$lib/components/MovieComponent.svelte";
+
+  export let movies: MovieType[];
 </script>
 
 <h2 class="text-xl m-3">Trending</h2>
 <div
   class="mx-2 grid grid-cols-2 place-content-center gap-x-2 gap-y-4 md:grid-cols-3 md:mx-4 lg:grid-cols-4 lg:mx-6"
 >
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
-  <MovieComponent />
+  {#each movies as movie}
+    <MovieComponent {movie} />
+  {/each}
 </div>
 <div class="dsy-join my-2 flex flex-row justify-center items-center">
   <input
