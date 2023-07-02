@@ -1,25 +1,20 @@
 import { API_URL } from "./url";
 import { objectToUrlParams } from "$lib/utils/objectToParam";
-import type { MovieType } from "./type";
 
-interface GetUpcomingMoviesOptions {
+interface GetTrendingMoviesOptions {
   page?: number;
-  limit?: number | 20;
+  limit?: number;
+  list: "most_pop_movies";
 }
 
-export async function getUpcomingMovies(config: GetUpcomingMoviesOptions) {
-  const limit = config.limit ? config.limit : 10;
+export async function getTrendingMovies(config: GetTrendingMoviesOptions) {
+  const limit = config.limit ? config.limit : 32;
   const page = config.page ? config.page : 1;
 
-  const objectParam = { limit, page };
+  const objectParam = { limit, page, list: config.list };
 
   const params = objectToUrlParams(objectParam);
-
-  // if (MapCaching.has(params)) {
-  //   return MapCaching.get(params) as Array<MovieType>;
-  // }
-
-  const url = `${API_URL}/titles/x/upcoming?${params}`;
+  const url = `${API_URL}/titles?${params}`;
   const options = {
     method: "GET",
     headers: {
